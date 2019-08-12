@@ -28,6 +28,6 @@ theme:
 expandResponses: "200,201"
 pathInMiddlePanel: true
 
-redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.18/redocpro-standalone.min.js
-redocExport: RedocPro
+#redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.18/redocpro-standalone.min.js
+#redocExport: RedocPro
 unstable_externalDescription: description.md
