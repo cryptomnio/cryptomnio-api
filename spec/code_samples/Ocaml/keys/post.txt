@@ -4,7 +4,7 @@ open Lwt
 
 let uri = Uri.of_string "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/keys" in
 let headers = Header.add (Header.init ()) "content-type" "application/json" in
-let body = Cohttp_lwt_body.of_string "{\"exchange\":\"kraken\",\"key\":\"string\",\"secret\":\"string\",\"passphrase\":\"string\",\"userID\":\"string\"}" in
+let body = Cohttp_lwt_body.of_string "{\"exchange\":\"kraken\",\"key\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"secret\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"passphrase\":\"SECRET PHRASE\",\"activated\":true,\"allocation\":\"TIER4\"}" in
 
 Client.call ~headers ~body `POST uri
 >>= fun (res, body_stream) ->

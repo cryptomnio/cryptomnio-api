@@ -2,7 +2,7 @@ import http.client
 
 conn = http.client.HTTPConnection("ec2-3-222-208-106.compute-1.amazonaws.com:8086")
 
-payload = "{\"allocation\":\"TIER1\"}"
+payload = "{\"allocation\":\"TIER4\"}"
 
 headers = { 'content-type': "application/json" }
 

@@ -4,7 +4,7 @@ open Lwt
 
 let uri = Uri.of_string "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/keys/%7BkeyId%7D/activate" in
 let headers = Header.add (Header.init ()) "content-type" "application/json" in
-let body = Cohttp_lwt_body.of_string "{\"allocation\":\"TIER1\"}" in
+let body = Cohttp_lwt_body.of_string "{\"allocation\":\"TIER4\"}" in
 
 Client.call ~headers ~body `PUT uri
 >>= fun (res, body_stream) ->

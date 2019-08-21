@@ -2,10 +2,11 @@
 
 NSDictionary *headers = @{ @"content-type": @"application/json" };
 NSDictionary *parameters = @{ @"exchange": @"kraken",
-                              @"key": @"string",
-                              @"secret": @"string",
-                              @"passphrase": @"string",
-                              @"userID": @"string" };
+                              @"key": @"1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+                              @"secret": @"1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+                              @"passphrase": @"SECRET PHRASE",
+                              @"activated": @YES,
+                              @"allocation": @"TIER4" };
 
 NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
 

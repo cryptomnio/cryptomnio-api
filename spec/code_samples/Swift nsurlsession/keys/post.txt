@@ -3,10 +3,11 @@ import Foundation
 let headers = ["content-type": "application/json"]
 let parameters = [
   "exchange": "kraken",
-  "key": "string",
-  "secret": "string",
-  "passphrase": "string",
-  "userID": "string"
+  "key": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "secret": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "passphrase": "SECRET PHRASE",
+  "activated": true,
+  "allocation": "TIER4"
 ] as [String : Any]
 
 let postData = JSONSerialization.data(withJSONObject: parameters, options: [])

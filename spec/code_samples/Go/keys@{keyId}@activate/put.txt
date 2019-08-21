@@ -11,7 +11,7 @@ func main() {
 
 	url := "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/keys/%7BkeyId%7D/activate"
 
-	payload := strings.NewReader("{\"allocation\":\"TIER1\"}")
+	payload := strings.NewReader("{\"allocation\":\"TIER4\"}")
 
 	req, _ := http.NewRequest("PUT", url, payload)
 

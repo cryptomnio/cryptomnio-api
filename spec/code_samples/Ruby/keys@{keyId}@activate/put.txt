@@ -7,7 +7,7 @@ http = Net::HTTP.new(url.host, url.port)
 
 request = Net::HTTP::Put.new(url)
 request["content-type"] = 'application/json'
-request.body = "{\"allocation\":\"TIER1\"}"
+request.body = "{\"allocation\":\"TIER4\"}"
 
 response = http.request(request)
 puts response.read_body

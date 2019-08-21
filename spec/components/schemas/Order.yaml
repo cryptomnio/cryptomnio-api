@@ -3,6 +3,7 @@ properties:
   internalOrderId:
     description: Cryptomnio order ID
     type: number
+    readOnly: true
   exchangeOrderId:
     description: Exchange order ID
     type: string
@@ -33,6 +34,7 @@ properties:
       - filled
       - rejected
     type: string
+    readOnly: true
   volume:
     default: 0
     description: Order volume
@@ -41,6 +43,7 @@ properties:
     default: 0
     description: Order executed (filled) amount
     type: number
+    readOnly: true
   price:
     default: 0
     description: Order price
@@ -53,14 +56,17 @@ properties:
     description: Order creation timestamp
     type: string
     format: date-time
+    readOnly: true
   lastUpdateAt:
     description: The timestamp when order was synchronized last time
     type: string
     format: date-time
+    readOnly: true
   closedAt:
     description: Order close timestamp
     type: string
     format: date-time
+    readOnly: true
 required:
   - internalOrderId
   - exchangeOrderId

@@ -9,7 +9,7 @@ var SwaggerSnippet = require('swagger-snippet');
 var SwaggerFile = require('../web_deploy/openapi.json'); //this wants a double dot
 
 // Snippet library has issue with basic auth, so we'll remove it for generation
-SwaggerFile.security = [];
+//SwaggerFile.security = [];
 
 async function run() {
 	try {

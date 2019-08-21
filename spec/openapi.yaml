@@ -25,7 +25,7 @@ tags:
     description: CRUD operations for keys
   - name: Orders
     description: CRUD operations for orders.
-  - name: Wallet
+  - name: Wallets
     description: CRUD operations for wallets
 x-tagGroups:
   - name: Keys

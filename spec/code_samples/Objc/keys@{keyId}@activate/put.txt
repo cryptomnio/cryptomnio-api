@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 NSDictionary *headers = @{ @"content-type": @"application/json" };
-NSDictionary *parameters = @{ @"allocation": @"TIER1" };
+NSDictionary *parameters = @{ @"allocation": @"TIER4" };
 
 NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
 

@@ -8,7 +8,7 @@ req.headers({
 
 req.type("json");
 req.send({
-  "allocation": "TIER1"
+  "allocation": "TIER4"
 });
 
 req.end(function (res) {

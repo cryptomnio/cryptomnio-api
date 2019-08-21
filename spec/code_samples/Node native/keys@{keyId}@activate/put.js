@@ -23,5 +23,5 @@ var req = http.request(options, function (res) {
   });
 });
 
-req.write(JSON.stringify({allocation: 'TIER1'}));
+req.write(JSON.stringify({allocation: 'TIER4'}));
 req.end();

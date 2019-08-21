@@ -1,5 +1,5 @@
 description: Authentication information is missing or invalid
-content:
-  application/json:
+headers:
+  WWW_Authenticate:
     schema:
-      $ref: '#/components/schemas/ErrorMessage'
+      type: string

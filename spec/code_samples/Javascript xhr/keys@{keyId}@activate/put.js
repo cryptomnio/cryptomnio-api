@@ -1,5 +1,5 @@
 var data = JSON.stringify({
-  "allocation": "TIER1"
+  "allocation": "TIER4"
 });
 
 var xhr = new XMLHttpRequest();

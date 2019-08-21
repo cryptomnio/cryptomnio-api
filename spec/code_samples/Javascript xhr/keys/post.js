@@ -1,9 +1,10 @@
 var data = JSON.stringify({
   "exchange": "kraken",
-  "key": "string",
-  "secret": "string",
-  "passphrase": "string",
-  "userID": "string"
+  "key": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "secret": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "passphrase": "SECRET PHRASE",
+  "activated": true,
+  "allocation": "TIER4"
 });
 
 var xhr = new XMLHttpRequest();

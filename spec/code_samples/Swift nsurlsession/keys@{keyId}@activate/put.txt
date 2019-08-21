@@ -1,7 +1,7 @@
 import Foundation
 
 let headers = ["content-type": "application/json"]
-let parameters = ["allocation": "TIER1"] as [String : Any]
+let parameters = ["allocation": "TIER4"] as [String : Any]
 
 let postData = JSONSerialization.data(withJSONObject: parameters, options: [])
 

@@ -1,6 +1,6 @@
 in: query
 name: exchange
-required: true
+required: false
 schema:
   type: string
   enum:

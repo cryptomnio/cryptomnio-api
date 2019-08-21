@@ -1,0 +1,34 @@
+type: object
+properties:
+  keyId:
+    type: string
+    example: 1aa5695d-4b8d-4aeb-8312-8a97d2119764
+    readOnly: true
+  exchange:
+    $ref: '#/components/schemas/ExchangeCode'
+  key:
+    type: string
+    example: 1aa5695d-4b8d-4aeb-8312-8a97d2119764
+    writeOnly: true
+    description: Exchange API public key
+  secret:
+    type: string
+    example: 1aa5695d-4b8d-4aeb-8312-8a97d2119764
+    writeOnly: true
+    description: Exchange API private key
+  passphrase:
+    type: string
+    example: SECRET PHRASE
+    writeOnly: true
+    description: Passphrase (required only for Coinbase)
+  activated:
+    type: boolean
+    default: true
+    description: Specifies if the key is activated
+  allocation:
+    $ref: '#/components/schemas/DataSyncAllocationLevel'
+required:
+  - keyId
+  - exchange
+  - key
+  - secret

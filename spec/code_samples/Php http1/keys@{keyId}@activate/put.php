@@ -8,7 +8,7 @@ $request->setHeaders(array(
   'content-type' => 'application/json'
 ));
 
-$request->setBody('{"allocation":"TIER1"}');
+$request->setBody('{"allocation":"TIER4"}');
 
 try {
   $response = $request->send();

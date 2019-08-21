@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "PUT",
-  CURLOPT_POSTFIELDS => "{\"allocation\":\"TIER1\"}",
+  CURLOPT_POSTFIELDS => "{\"allocation\":\"TIER4\"}",
   CURLOPT_HTTPHEADER => array(
     "content-type: application/json"
   ),

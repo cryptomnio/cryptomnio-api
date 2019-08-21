@@ -1,3 +1,24 @@
+get:
+  summary: Get all exchange api keys
+  tags:
+    - Keys
+  parameters:
+    - $ref: '#/components/parameters/exchangeParam'
+    - in: query
+      name: activated
+      required: false
+      schema:
+        type: boolean
+      example: true
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/ExchangeApiKey'
 post:
   tags:
     - Keys
@@ -25,28 +46,5 @@ post:
     content:
       application/json:
         schema:
-          properties:
-            exchange:
-              $ref: '#/components/schemas/ExchangeCode'
-            key:
-              description: Exchange API public key
-              type: string
-            secret:
-              description: Exchange API private key
-              type: string
-            passphrase:
-              description: Passphrase (only required for Coinbase)
-              type: string
-            userID:
-              description: Used only for Bitstamp
-              type: string
-          required:
-            - exchange
-            - key
-            - secret
-          type: object
-        example:
-          exchange: kraken
-          key: test
-          secret: test
+          $ref: '#/components/schemas/ExchangeApiKey'
     required: true

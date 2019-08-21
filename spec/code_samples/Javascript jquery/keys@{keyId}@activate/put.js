@@ -7,7 +7,7 @@ var settings = {
     "content-type": "application/json"
   },
   "processData": false,
-  "data": "{\"allocation\":\"TIER1\"}"
+  "data": "{\"allocation\":\"TIER4\"}"
 }
 
 $.ajax(settings).done(function (response) {
