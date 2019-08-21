@@ -1,0 +1,10 @@
+in: query
+name: exchange
+required: true
+schema:
+  type: string
+  enum:
+    - kraken
+    - bitfinex
+    - coinbase
+    - gemini

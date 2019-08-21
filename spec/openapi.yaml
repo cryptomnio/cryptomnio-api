@@ -8,13 +8,10 @@ info:
     email: helloworld@flanneldivision.com
   x-logo:
     url: 'http://flanneldivision.com/img/FLDV_Full_Logo_Color.svg'
-  description: test
+  description: ''
 servers:
-  - url: 'http://ec2-3-222-208-106.compute-1.amazonaws.com:{port}'
-    description: Staging Server
-    variables:
-      port:
-        default: '8086'
+  - url: 'http://ec2-3-222-208-106.compute-1.amazonaws.com:8086'
+    description: Staging server
   - url: 'https://api.samplehost.com/{version}'
     description: Example dummy server
     variables:
@@ -40,5 +37,4 @@ x-tagGroups:
   - name: Wallets
     tags:
       - Wallets
-security:
-  - BasicAuth: []
+security: []

@@ -1,0 +1,11 @@
+require 'uri'
+require 'net/http'
+
+url = URI("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/wallets?exchange=SOME_STRING_VALUE&keyId=SOME_STRING_VALUE")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Get.new(url)
+
+response = http.request(request)
+puts response.read_body

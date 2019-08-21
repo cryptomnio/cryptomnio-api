@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+	"net/http"
+	"io/ioutil"
+)
+
+func main() {
+
+	url := "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/orders"
+
+	payload := strings.NewReader("{\"exchange\":\"kraken\",\"keyId\":\"string\",\"price\":0,\"volume\":0,\"side\":\"buy\",\"pair\":\"btc_usd\"}")
+
+	req, _ := http.NewRequest("POST", url, payload)
+
+	req.Header.Add("content-type", "application/json")
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+
+}

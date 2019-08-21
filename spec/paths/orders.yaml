@@ -14,10 +14,7 @@ get:
   description: Returns all orders
   operationId: GET_orders
   parameters:
-    - name: exchange
-      in: query
-      schema:
-        $ref: '#/components/schemas/ExchangeCode'
+    - $ref: '#/components/parameters/exchangeParam'
     - name: keyId
       in: query
       description: API key ID

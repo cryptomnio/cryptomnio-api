@@ -1,0 +1,5 @@
+var client = new RestClient("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/orders");
+var request = new RestRequest(Method.POST);
+request.AddHeader("content-type", "application/json");
+request.AddParameter("application/json", "{\"exchange\":\"kraken\",\"keyId\":\"string\",\"price\":0,\"volume\":0,\"side\":\"buy\",\"pair\":\"btc_usd\"}", ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);

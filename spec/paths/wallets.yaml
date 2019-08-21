@@ -4,11 +4,7 @@ get:
   tags:
     - Wallets
   parameters:
-    - name: exchange
-      in: query
-      required: false
-      schema:
-        $ref: '#/components/schemas/ExchangeCode'
+    - $ref: '#/components/parameters/exchangeParam'
     - name: keyId
       in: query
       required: false
