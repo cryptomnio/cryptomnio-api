@@ -1,0 +1,17 @@
+example:
+  code: OK
+  data: RESPONSE DATA
+type: object
+properties:
+  code:
+    default: OK
+    description: Operation code
+    enum:
+      - OK
+    type: string
+  data:
+    description: Response
+    type: string
+required:
+  - code
+  - data

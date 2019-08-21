@@ -1,0 +1,44 @@
+get:
+  summary: Get all wallets
+  description: Get all wallets based on exchange
+  tags:
+    - Wallets
+  parameters:
+    - name: exchange
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/ExchangeCode'
+    - name: keyId
+      in: query
+      required: false
+      description: API key ID from cryptomnio
+      schema:
+        type: string
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                default: OK
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: Wallet ID
+                    exchange:
+                      $ref: '#/components/schemas/ExchangeCode'
+                    associatedApiKeys:
+                      type: array
+                      items:
+                        type: string
+            required:
+              - code
+              - data

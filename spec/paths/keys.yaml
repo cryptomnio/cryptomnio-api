@@ -1,0 +1,52 @@
+post:
+  tags:
+    - Keys
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/OkMessage'
+          example:
+            code: OK
+            data: API KEY
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorMessage'
+    default:
+      $ref: '#/components/responses/GenericError'
+  summary: Upload and store exchange API key
+  description: Uploads and stores exchange API key in the cryptomnio.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            exchange:
+              $ref: '#/components/schemas/ExchangeCode'
+            key:
+              description: Exchange API public key
+              type: string
+            secret:
+              description: Exchange API private key
+              type: string
+            passphrase:
+              description: Passphrase (only required for Coinbase)
+              type: string
+            userID:
+              description: Used only for Bitstamp
+              type: string
+          required:
+            - exchange
+            - key
+            - secret
+          type: object
+        example:
+          exchange: kraken
+          key: test
+          secret: test
+    required: true

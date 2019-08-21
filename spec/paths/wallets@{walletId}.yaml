@@ -1,0 +1,26 @@
+get:
+  summary: Get wallet info
+  description: Get wallet info
+  tags:
+    - Wallets
+  parameters:
+    - name: walletId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            properties:
+              code:
+                default: OK
+                type: string
+              data:
+                $ref: '#/components/schemas/Wallet'
+            required:
+              - code
+              - data

@@ -1,0 +1,15 @@
+example:
+  code: ERROR
+  error: Something went wrong with the fly chariot
+type: object
+properties:
+  code:
+    default: ERROR
+    description: Operation error code
+    type: string
+  error:
+    description: Description of error
+    type: string
+required:
+  - code
+  - error

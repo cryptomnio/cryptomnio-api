@@ -4,18 +4,18 @@ info:
   version: 0.0.1
   contact:
     name: Flannel Division Support
-    url: 'https://flanneldivision.com'
+    url: https://flanneldivision.com
     email: helloworld@flanneldivision.com
   x-logo:
-    url: 'http://flanneldivision.com/img/FLDV_Full_Logo_Color.svg'
+    url: http://flanneldivision.com/img/FLDV_Full_Logo_Color.svg
   description: test
 servers:
-  - url: 'http://ec2-3-222-208-106.compute-1.amazonaws.com:{port}'
+  - url: http://ec2-3-222-208-106.compute-1.amazonaws.com:{port}
     description: Staging Server
     variables:
       port:
-        default: '8086'
-  - url: 'https://api.samplehost.com/{version}'
+        default: "8086"
+  - url: https://api.samplehost.com/{version}
     description: Example dummy server
     variables:
       version:
@@ -41,4 +41,4 @@ x-tagGroups:
     tags:
       - Wallets
 security:
-  - BasicAuth: []
+  - Basic Auth: []

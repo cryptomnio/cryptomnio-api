@@ -1,0 +1,30 @@
+type: http
+scheme: basic
+description: |
+  Current implementation for EASE testing
+
+  Authentication is done with Basic Authentication method. This method
+  requires to pass special 
+
+  **Authorization** header with each HTTP request:
+
+  ```text
+  Authorization: Basic <BASE64>
+  ```
+
+  `<BASE64>` is the Base64 encoded "username:password" string.
+
+  There are a few assumptions with this approach
+
+  1. username and password must literally equal to each other
+
+  2. username validity is not being checked in the system (authorization
+  engine grants access for any passed username), so any random string can be
+  used as username.
+
+  So for client with `BLOCKHENGE:BLOCKHENGE` credentials the header will look
+  like:
+
+  ```
+  Authorization: Basic QkxPQ0tIRU5HRTpCTE9DS0hFTkdF
+  ```

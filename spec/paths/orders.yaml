@@ -1,0 +1,96 @@
+get:
+  tags:
+    - Orders
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Order'
+  summary: Get all orders
+  description: Returns all orders
+  operationId: GET_orders
+  parameters:
+    - name: exchange
+      in: query
+      schema:
+        $ref: '#/components/schemas/ExchangeCode'
+    - name: keyId
+      in: query
+      description: API key ID
+      schema:
+        type: string
+    - name: internalOrderId
+      in: query
+      description: Cryptomnio order ID
+      schema:
+        type: number
+    - name: closedOrders
+      in: query
+      description: Get only closed orders
+      schema:
+        type: boolean
+    - name: activeOrders
+      in: query
+      description: Get only active orders
+      schema:
+        type: boolean
+post:
+  tags:
+    - Orders
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Order'
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorMessage'
+  summary: Create new order
+  description: |
+    Stores order in Cryptomnio and pushes it immediately to the exchange. The
+    new order is stored with `queued` status, which means that order is being
+    processed by the Cryptomnio. This operation is allowed only if API key
+    has been activated.
+  operationId: POST_orders
+  requestBody:
+    content:
+      application/json:
+        schema:
+          properties:
+            exchange:
+              $ref: '#/components/schemas/ExchangeCode'
+            keyId:
+              description: API key ID
+              type: string
+            price:
+              description: Order price
+              type: number
+            volume:
+              description: Order volume
+              type: number
+            side:
+              description: Order side
+              enum:
+                - buy
+                - sell
+              type: string
+            pair:
+              $ref: '#/components/schemas/PairCode'
+          required:
+            - exchange
+            - keyId
+            - price
+            - volume
+            - side
+            - pair
+          type: object
+    required: true

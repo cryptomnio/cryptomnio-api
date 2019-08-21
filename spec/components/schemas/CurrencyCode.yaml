@@ -1,0 +1,8 @@
+description: Currency Code
+enum:
+  - btc
+  - ltc
+  - eth
+  - eur
+  - usd
+type: string

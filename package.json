@@ -7,8 +7,13 @@
   "private": true,
   "scripts": {
     "start": "swagger-repo serve",
+    "code-snippets": "openapi-generator generate -i web_deploy/openapi.yaml -g ruby -o clients/",
     "build": "swagger-repo build -o web_deploy",
     "test": "swagger-repo validate",
     "gh-pages": "swagger-repo gh-pages"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "0.0.16-4.1.0",
+    "speccy": "^0.11.0"
   }
 }

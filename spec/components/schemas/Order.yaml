@@ -1,0 +1,78 @@
+type: object
+properties:
+  internalOrderId:
+    description: Cryptomnio order ID
+    type: number
+  exchangeOrderId:
+    description: Exchange order ID
+    type: string
+  exchange:
+    $ref: '#/components/schemas/ExchangeCode'
+  pair:
+    $ref: '#/components/schemas/PairCode'
+  side:
+    default: buy
+    description: Order side ("sell" or "buy")
+    enum:
+      - buy
+      - sell
+    type: string
+  type:
+    default: limit
+    description: Order Type only limit is supported
+    enum:
+      - limit
+    type: string
+  status:
+    default: queued
+    description: Order status
+    enum:
+      - queued
+      - open
+      - cancelled
+      - filled
+      - rejected
+    type: string
+  volume:
+    default: 0
+    description: Order volume
+    type: number
+  filled:
+    default: 0
+    description: Order executed (filled) amount
+    type: number
+  price:
+    default: 0
+    description: Order price
+    type: number
+  fee:
+    default: 0
+    description: Order fee
+    type: number
+  createdAt:
+    description: Order creation timestamp
+    type: string
+    format: date-time
+  lastUpdateAt:
+    description: The timestamp when order was synchronized last time
+    type: string
+    format: date-time
+  closedAt:
+    description: Order close timestamp
+    type: string
+    format: date-time
+required:
+  - internalOrderId
+  - exchangeOrderId
+  - exchange
+  - pair
+  - side
+  - type
+  - status
+  - volume
+  - filled
+  - price
+  - fee
+  - createdAt
+  - lastUpdateAt
+  - closedAt

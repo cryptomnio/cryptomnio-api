@@ -1,0 +1,16 @@
+type: object
+properties:
+  exchange:
+    $ref: '#/components/schemas/ExchangeCode'
+  balances:
+    type: array
+    items:
+      $ref: '#/components/schemas/Balance'
+  timestamp:
+    description: The timestamp when wallet was synchronized last time
+    type: string
+    format: date-time
+required:
+  - exchange
+  - balances
+  - timestamp

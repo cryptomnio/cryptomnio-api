@@ -1,0 +1,8 @@
+default: btc_usd
+description: Currency pair
+enum:
+  - btc_usd
+  - btc_eur
+  - eth_usd
+  - ltc_usd
+type: string

@@ -1,0 +1,27 @@
+delete:
+  tags:
+    - Orders
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Order'
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorMessage'
+  summary: Cancel order
+  description: |
+    Cancels order on exchange and updates order status in Cryptomnio storage.
+    This operation is allowed only if API key has been activated.
+  operationId: DELETE_orders-orderId
+parameters:
+  - name: orderId
+    in: path
+    required: true
+    schema:
+      type: string

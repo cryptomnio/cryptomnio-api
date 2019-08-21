@@ -1,0 +1,20 @@
+type: object
+properties:
+  currency:
+    $ref: '#/components/schemas/CurrencyCode'
+  amount:
+    default: 0
+    type: number
+  available:
+    default: 0
+    description: Available funds for given currency in wallet
+    type: number
+  frozen:
+    default: 0
+    description: Frozen funds
+    type: number
+required:
+  - currency
+  - amount
+  - available
+  - frozen

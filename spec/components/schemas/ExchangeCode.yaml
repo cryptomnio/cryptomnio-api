@@ -1,0 +1,7 @@
+description: Exchange code
+enum:
+  - kraken
+  - bitfinex
+  - coinbase
+  - gemini
+type: string
