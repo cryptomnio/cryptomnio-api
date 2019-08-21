@@ -37,4 +37,5 @@ x-tagGroups:
   - name: Wallets
     tags:
       - Wallets
-security: []
+security:
+  - BasicAuth: []

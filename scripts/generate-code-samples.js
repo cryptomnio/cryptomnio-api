@@ -6,41 +6,39 @@ var SwaggerParser = require("swagger-parser");
 var stringifyObject = require('stringify-object');
 var SwaggerSnippet = require('swagger-snippet');
 
-//now load that file
 var SwaggerFile = require('../web_deploy/openapi.json'); //this wants a double dot
-var major = require('../web_deploy/openapi.json'); //this wants a double dot
 
+// Snippet library has issue with basic auth, so we'll remove it for generation
+SwaggerFile.security = [];
 
 async function run() {
-	var results = SwaggerSnippet.getSwaggerSnippets(SwaggerFile,
-	        [
-	        'c', //(default)
-	        'csharp', //(default)
-	        'go', //(default)
-	        'java_okhttp',
-	        'java_unirest', //(default)
-	        'javascript_jquery',
-	        'javascript_xhr', //(default)
-	        'node_native', //(default)
-	        'node_request',
-	        'node_unirest',
-	        'objc', //(default)
-	        'ocaml', //(default)
-	        'php_curl', //(default)
-	        'php_http1',
-	        'php_http2',
-	        'python_python3', //(default)
-	        'python_requests',
-	        'ruby', //(default)
-	        'shell_curl', //(default)
-	        'shell_httpie',
-	        'shell_wget',
-	        'swift_nsurlsession' //(default)
-	        ]);
-
-	//var results = SwaggerSnippet.getSwaggerSnippets(major, ['node_request', 'c']);
-
 	try {
+		var results = SwaggerSnippet.getSwaggerSnippets(SwaggerFile,
+			[
+				'c', //(default)
+				'csharp', //(default)
+				'go', //(default)
+				'java_okhttp',
+				'java_unirest', //(default)
+				'javascript_jquery',
+				'javascript_xhr', //(default)
+				'node_native', //(default)
+				'node_request',
+				'node_unirest',
+				'objc', //(default)
+				'ocaml', //(default)
+				'php_curl', //(default)
+				'php_http1',
+				'php_http2',
+				'python_python3', //(default)
+				'python_requests',
+				'ruby', //(default)
+				'shell_curl', //(default)
+				'shell_httpie',
+				'shell_wget',
+				'swift_nsurlsession' //(default)
+			]);
+
 		let api = await SwaggerParser.validate(SwaggerFile);
 		console.log(`Server: ${api.servers[0].url}`);
 

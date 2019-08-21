@@ -1,7 +1,6 @@
-
 apiTitle: Cryptomnio API
 splitSpec: true
 codeSamples: true
-swaggerUI: true
+swaggerUI: false
 travis: false
-oasVersion: 3.0.0
+oasVersion: '3.0.0'
