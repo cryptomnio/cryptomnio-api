@@ -7,7 +7,7 @@ info:
     url: 'https://flanneldivision.com'
     email: helloworld@flanneldivision.com
   x-logo:
-    url: 'http://flanneldivision.com/img/FLDV_Full_Logo_Color.svg'
+    url: 'https://cryptomnio.com/images/Cryptomnio_Logo_M.png'
   description: ''
 servers:
   - url: 'http://ec2-3-222-208-106.compute-1.amazonaws.com:8086'
