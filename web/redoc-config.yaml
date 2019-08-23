@@ -1,6 +1,6 @@
 showConsole: true
-layout:
-  scope: section
+#layout:
+#  scope: section
 theme:
   logo:
     gutter: 20px 30px 14px 30px
