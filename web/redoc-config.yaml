@@ -25,6 +25,8 @@ theme:
     backgroundColor: "#263238"
   links:
     color: "#6CC496"
+expandResponses: "200,201"
+pathInMiddlePanel: true
 
 redocURL: https://redocpro-cdn.redoc.ly/v1.0.0-beta.18/redocpro-standalone.min.js
 redocExport: RedocPro
