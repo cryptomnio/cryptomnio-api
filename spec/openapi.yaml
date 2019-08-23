@@ -3,9 +3,8 @@ info:
   title: Cryptomnio API
   version: 0.0.1
   contact:
-    name: Flannel Division Support
-    url: 'https://flanneldivision.com'
-    email: helloworld@flanneldivision.com
+    name: Cryptomnio Support
+    url: 'https://cryptomnio.com'
   x-logo:
     url: 'https://cryptomnio.com/images/Cryptomnio_Logo_M.png'
   description: ''
