@@ -1,6 +1,5 @@
 # Cryptomnio API OpenAPI Specification
 
-
 ## Working on specification
 ### Install
 
