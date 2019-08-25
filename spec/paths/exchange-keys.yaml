@@ -38,8 +38,6 @@ post:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorMessage'
-    default:
-      $ref: '#/components/responses/GenericError'
   summary: Upload and store exchange API key
   description: Uploads and stores exchange API key in the cryptomnio.
   requestBody:
