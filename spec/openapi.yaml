@@ -20,7 +20,7 @@ servers:
           - v2
         default: v1
 tags:
-  - name: Keys
+  - name: Exchange Keys
     description: CRUD operations for keys
   - name: Orders
     description: CRUD operations for orders.
@@ -29,7 +29,7 @@ tags:
 x-tagGroups:
   - name: Keys
     tags:
-      - Keys
+      - Exchange Keys
   - name: Orders
     tags:
       - Orders

@@ -1,5 +1,0 @@
-var client = new RestClient("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/keys");
-var request = new RestRequest(Method.POST);
-request.AddHeader("content-type", "application/json");
-request.AddParameter("application/json", "{\"exchange\":\"kraken\",\"key\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"secret\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"passphrase\":\"SECRET PHRASE\",\"activated\":true,\"allocation\":\"TIER4\"}", ParameterType.RequestBody);
-IRestResponse response = client.Execute(request);
