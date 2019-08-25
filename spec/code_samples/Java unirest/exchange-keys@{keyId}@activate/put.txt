@@ -1,0 +1,4 @@
+HttpResponse<String> response = Unirest.put("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/%7BkeyId%7D/activate")
+  .header("content-type", "application/json")
+  .body("{\"allocation\":\"TIER4\"}")
+  .asString();

@@ -1,0 +1,13 @@
+require 'uri'
+require 'net/http'
+
+url = URI("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request.body = "{\"exchange\":\"kraken\",\"key\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"secret\":\"1aa5695d-4b8d-4aeb-8312-8a97d2119764\",\"passphrase\":\"SECRET PHRASE\",\"activated\":true,\"allocation\":\"TIER4\"}"
+
+response = http.request(request)
+puts response.read_body

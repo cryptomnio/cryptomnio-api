@@ -1,0 +1,26 @@
+delete:
+  tags:
+    - Exchange Keys
+  responses:
+    '200':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/OkMessage'
+    '400':
+      description: ''
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorMessage'
+  summary: Deactivate and Delete API key
+  description: |
+    Deactivates and deletes API key from cryptomnio and clears all connected
+    trade data (orders, balances, etc.)
+parameters:
+  - name: keyId
+    in: path
+    required: true
+    schema:
+      type: string

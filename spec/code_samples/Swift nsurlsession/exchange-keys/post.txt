@@ -1,0 +1,32 @@
+import Foundation
+
+let headers = ["content-type": "application/json"]
+let parameters = [
+  "exchange": "kraken",
+  "key": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "secret": "1aa5695d-4b8d-4aeb-8312-8a97d2119764",
+  "passphrase": "SECRET PHRASE",
+  "activated": true,
+  "allocation": "TIER4"
+] as [String : Any]
+
+let postData = JSONSerialization.data(withJSONObject: parameters, options: [])
+
+let request = NSMutableURLRequest(url: NSURL(string: "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys")! as URL,
+                                        cachePolicy: .useProtocolCachePolicy,
+                                    timeoutInterval: 10.0)
+request.httpMethod = "POST"
+request.allHTTPHeaderFields = headers
+request.httpBody = postData as Data
+
+let session = URLSession.shared
+let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+  if (error != nil) {
+    print(error)
+  } else {
+    let httpResponse = response as? HTTPURLResponse
+    print(httpResponse)
+  }
+})
+
+dataTask.resume()
