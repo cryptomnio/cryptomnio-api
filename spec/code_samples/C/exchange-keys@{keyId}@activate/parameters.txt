@@ -1,6 +1,6 @@
 CURL *hnd = curl_easy_init();
 
 curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "PARAMETERS");
-curl_easy_setopt(hnd, CURLOPT_URL, "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/%7BkeyId%7D/activate");
+curl_easy_setopt(hnd, CURLOPT_URL, "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/{keyId}/activate");
 
 CURLcode ret = curl_easy_perform(hnd);

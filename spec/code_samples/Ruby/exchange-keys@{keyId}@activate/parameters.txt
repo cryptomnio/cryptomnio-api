@@ -7,7 +7,7 @@ class Net::HTTP::Parameters < Net::HTTPRequest
   RESPONSE_HAS_BODY = true
 end
 
-url = URI("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/%7BkeyId%7D/activate")
+url = URI("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/{keyId}/activate")
 
 http = Net::HTTP.new(url.host, url.port)
 

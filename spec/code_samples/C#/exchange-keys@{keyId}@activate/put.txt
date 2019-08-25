@@ -1,0 +1,5 @@
+var client = new RestClient("http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/exchange-keys/{keyId}/activate");
+var request = new RestRequest(Method.PUT);
+request.AddHeader("content-type", "application/json");
+request.AddParameter("application/json", "{\"allocation\":\"TIER4\"}", ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);

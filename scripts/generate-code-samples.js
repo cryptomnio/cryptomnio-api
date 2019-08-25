@@ -18,29 +18,28 @@ async function run() {
 				'c', //(default)
 				'csharp', //(default)
 				'go', //(default)
-				'java_okhttp',
-				'java_unirest', //(default)
-				'javascript_jquery',
-				'javascript_xhr', //(default)
-				'node_native', //(default)
-				'node_request',
-				'node_unirest',
+				//'java_okhttp',
+				'java', //(default)
+				//'javascript_jquery',
+				'javascript', //(default)
+				'node', //(default)
+				//'node_request',
+				//'node_unirest',
 				'objc', //(default)
 				'ocaml', //(default)
-				'php_curl', //(default)
-				'php_http1',
-				'php_http2',
-				'python_python3', //(default)
-				'python_requests',
+				'php', //(default)
+				//'php_http1',
+				//'php_http2',
+				'python', //(default)
+				//'python_requests',
 				'ruby', //(default)
-				'shell_curl', //(default)
-				'shell_httpie',
-				'shell_wget',
-				'swift_nsurlsession' //(default)
+				'shell', //(default)
+				//'shell_httpie',
+				//'shell_wget',
+				'swift' //(default)
 			]);
 
 		let api = await SwaggerParser.validate(SwaggerFile);
-		console.log(`Server: ${api.servers[0].url}`);
 
 		results.forEach(function(result) {
 			var path = result.url.substring(api.servers[0].url.length + 1).replace(/\//g,'@');
@@ -48,8 +47,13 @@ async function run() {
 				const pretty = stringifyObject(result.snippets, { indent: '  ', singleQuotes: false });
 				result.snippets.forEach(function(snippet)
 					{
+						// Fixing issue with URL parameters
+						snippet.content = snippet.content.replace(/%7B/g, '{');
+						snippet.content = snippet.content.replace(/%7D/g, '}');
+
 						var ext = '.txt';
 						var lang = snippet.id;
+						lang = lang.replace(/csharp/g, 'c#');
 						lang = lang[0].toUpperCase() + lang.substring(1); //uppercase first letter
 						if(lang.substring(0,2) == 'C_') { ext = '.c'; }
 						if(lang.substring(0,3) == 'Go_') { ext = '.go'; }

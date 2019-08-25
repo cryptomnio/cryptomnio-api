@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	url := "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/orders/%7BorderId%7D"
+	url := "http://ec2-3-222-208-106.compute-1.amazonaws.com:8086/orders/{orderId}"
 
 	req, _ := http.NewRequest("DELETE", url, nil)
 
