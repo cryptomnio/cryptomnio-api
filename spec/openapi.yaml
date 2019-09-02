@@ -21,7 +21,9 @@ servers:
         default: v1
 tags:
   - name: Exchange Keys
-    description: CRUD operations for keys
+    description: >
+      Exchange API keys are used to interact with other exchanges to make
+      orders.
   - name: Orders
     description: CRUD operations for orders.
   - name: Wallets

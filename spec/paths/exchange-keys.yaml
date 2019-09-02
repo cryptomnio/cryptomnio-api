@@ -1,5 +1,7 @@
 get:
-  summary: Get all exchange api keys
+  summary: Get all exchange API key IDs
+  description: |
+    Returns Cryptomnio key IDs for all exchange keys uploaded to cryptomnio.
   tags:
     - Exchange Keys
   parameters:
@@ -39,7 +41,11 @@ post:
           schema:
             $ref: '#/components/schemas/ErrorMessage'
   summary: Upload and store exchange API key
-  description: Uploads and stores exchange API key in the cryptomnio.
+  description: >
+    Uploads and stores exchange API key in the cryptomnio. Returns a cryptomnio
+    `keyId`
+
+    which is used in API calls to cryptomnio. 
   requestBody:
     content:
       application/json:

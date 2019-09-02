@@ -1,0 +1,12 @@
+type: oauth2
+description: ''
+flows:
+  authorizationCode:
+    authorizationUrl: 'https://api.cryptomnio.com/oauth/authorize'
+    tokenUrl: 'https://api.cryptomnio.com/oauth/token'
+    scopes:
+      'exchange-keys:read': Read exchange key IDs
+      'exchange-keys:write': Modify exchange keys
+      'orders:read': Read orders
+      'orders:write': Create and modify orders
+      'wallets:read': Read wallet information
